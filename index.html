@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>RV Login</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+                <img src="logo.gif" alt="RV Logo">
+                <h2>Rav's Vlog</h2>
+            </div>
+            <div class="welcome-text">
+                <h1>Welcome to Rav's Blog</h1>
+                <p>Sign into your account</p>
+            </div>
+            <form>
+                <div class="input-container">
+                    <i class="bx bxs-user"></i>
+                    <input type="text" placeholder="Phone or Email address" class="input-field" required>
+                </div>
+                <div class="input-container">
+                    <i class="bx bx-lock-alt"></i>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Password" class="input-field" required>
+                        <label class="password-toggle">
+                            <input type="checkbox" id="toggle-password">
+                            <span>Show</span>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Log In</button>
+                <a href="" class="forgot-password">Forgot password?</a>
+            </form>
+            
+        </div>
+        <div class="right-section">
+            <img src="BB.jpg" alt="Illustration" class="illustration">
+        </div>
+    </div>
+    <script>
+        document.getElementById('toggle-password').addEventListener('change', function() {
+            const passwordField = document.getElementById('password');
+            if (this.checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        });
+        </script>
+</body>
+</html>
